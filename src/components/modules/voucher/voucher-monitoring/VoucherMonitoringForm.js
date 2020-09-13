@@ -20,7 +20,7 @@ const VoucherMonitoringForm = ({record, handleSave, handleCancel}) => {
     }, []);
 
     const handleSubmit = (formData) => {
-        formData.number = formData.type + padStart(count, 4, 0);
+        formData.number = formData.type + padStart(count + 1, 4, 0);
         formData.registerDate = new Date();
         handleSave(formData)
     };
